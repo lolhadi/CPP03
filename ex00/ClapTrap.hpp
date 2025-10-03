@@ -6,7 +6,7 @@
 /*   By: muhabin- <muhabin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 14:48:00 by muhabin-          #+#    #+#             */
-/*   Updated: 2025/10/03 15:20:29 by muhabin-         ###   ########.fr       */
+/*   Updated: 2025/10/03 20:20:13 by muhabin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ class ClapTrap{
 		ClapTrap(const ClapTrap &other);
 		ClapTrap& operator = (const ClapTrap &other);
 		~ClapTrap();
-
 
 		// Member function
 		void attack(const std::string& target); // tries to attack a target(cost energy)

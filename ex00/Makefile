@@ -1,10 +1,10 @@
 NAME	= ex00
 
-CXX		= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+CC	= c++
+CFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
 
-SRCS	= main.cpp Fixed.cpp
+SRCS	= ClapTrap.cpp main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
@@ -18,8 +18,8 @@ $(NAME): $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 		@echo "$(GREEN) $(NAME), Great news, It Compiled! $(RESET)"
 
-# %.o: %.cpp
-# 		$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.cpp
+		$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 		$(RM) $(OBJS)
