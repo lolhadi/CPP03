@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muhabin- <muhabin-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: muhabin- <muhabin-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 20:32:53 by muhabin-          #+#    #+#             */
-/*   Updated: 2025/10/07 22:24:23 by muhabin-         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:38:27 by muhabin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoint
 }
 
 ClapTrap::ClapTrap(const ClapTrap& other){
-	std::cout<< GREEN << "Claptrap " << this->_name << "Copied from " << other._name << RESET << std::endl;
+	std::cout<< GREEN << "Claptrap Copy Consturctor is Called" << RESET << std::endl;
 	*this = other;
 }
 
@@ -42,11 +42,11 @@ ClapTrap::~ClapTrap(){
 // Member Function
 void ClapTrap::attack(const std::string& target){
 	if (this->_hitPoints == 0){
-		std::cout << BLUE << this->_name << "ded ady" << RESET << std::endl;
+		std::cout << BLUE << this->_name << " is Dead and Cannot attack" << RESET << std::endl;
 		return;
 	}
 	if (this->_energyPoints == 0){
-		std::cout << BLUE << this->_name << "tired, no energy" << RESET << std::endl;
+		std::cout << BLUE << this->_name << " Cannot attack cause got no energy" << RESET << std::endl;
 		return;
 	}
 	else

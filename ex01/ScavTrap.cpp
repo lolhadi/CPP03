@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: muhabin- <muhabin-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: muhabin- <muhabin-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 23:14:21 by muhabin-          #+#    #+#             */
-/*   Updated: 2025/10/08 13:33:41 by muhabin-         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:38:38 by muhabin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name){
 
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other){
 	std::cout << GREEN << "ScavTrap Copy constructor called" << RESET << std::endl;
-	std::cout<< GREEN << "ScavTrap " << this->_name << " Copied from " << other._name << RESET << std::endl;
 	*this=other;
 }
 
