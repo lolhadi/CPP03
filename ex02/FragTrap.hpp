@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muhabin- <muhabin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 22:22:35 by muhabin-          #+#    #+#             */
-/*   Updated: 2025/10/06 21:48:15 by muhabin-         ###   ########.fr       */
+/*   Created: 2025/10/08 16:33:00 by muhabin-          #+#    #+#             */
+/*   Updated: 2025/10/08 17:54:00 by muhabin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-int main(){
-	ClapTrap a;
-	ClapTrap b("Alpha");
-	ClapTrap c("Bravo");
+class FragTrap : public ClapTrap{
+	public:
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(const FragTrap& other);
+	FragTrap& operator= (const FragTrap& other);
+	~FragTrap();
 
-	// Attack-Damage
-	b.attack("Bravo");
-	c.takeDamage(5);
-	// Counter-Attack
-	c.attack("Alpha");
-	b.takeDamage(8);
-	//Repair
-	c.beRepaired(3);
-	// Final Attack Kill
-	b.attack("Bravo");
-	c.takeDamage(20);
-	// Dead repair attempt
-	c.beRepaired(5); // should fail cause dead ady
-}
+	// // Member Function
+	void highFivesGuys(void);
+};

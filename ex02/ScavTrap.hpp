@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muhabin- <muhabin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 22:22:35 by muhabin-          #+#    #+#             */
-/*   Updated: 2025/10/06 21:48:15 by muhabin-         ###   ########.fr       */
+/*   Created: 2025/10/06 22:38:16 by muhabin-          #+#    #+#             */
+/*   Updated: 2025/10/08 11:53:40 by muhabin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-int main(){
-	ClapTrap a;
-	ClapTrap b("Alpha");
-	ClapTrap c("Bravo");
+class ScavTrap : public ClapTrap{
+	public:
+	//Constructor
+		ScavTrap();
+		ScavTrap(std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap& other);
+		ScavTrap& operator = (const ScavTrap& other);
 
-	// Attack-Damage
-	b.attack("Bravo");
-	c.takeDamage(5);
-	// Counter-Attack
-	c.attack("Alpha");
-	b.takeDamage(8);
-	//Repair
-	c.beRepaired(3);
-	// Final Attack Kill
-	b.attack("Bravo");
-	c.takeDamage(20);
-	// Dead repair attempt
-	c.beRepaired(5); // should fail cause dead ady
-}
+	// Public member Function
+	void guardGate();
+	void attack(const std::string& target);
+};
+
